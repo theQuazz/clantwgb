@@ -1,0 +1,118 @@
+!!!
+%html
+  %head
+    /
+      Created by Quazz
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Clan TwGB
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:content => "Website for Clan TwGB Warcraft III Island Troll Tribes custom games. Has stats, info, forums, and more.", :name => "description"}/
+    %meta{:content => "island troll tribes clan twgb", :name => "keywords"}
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %script{:src => "script.js", :type => "text/javascript"}
+    %script{:src => "articlejs.js", :type => "text/javascript"}
+    %script{:src => "contact.js", :type => "text/javascript"}
+  %body
+    %section#servers.hidden{style:"display:none;"}
+      Server:
+      %a{href: "http://classic.battle.net/war3/ladder/w3xp-clan-profile.aspx?Gateway=Azeroth&ClanTag=TwGB", target: "_blank"} useast.battle.net
+      %br/
+      Server:
+      %a{href: "http://classic.battle.net/war3/ladder/w3xp-clan-profile.aspx?Gateway=Lordaeron", target: "_blank"} uswest.battle.net
+      %br/
+      Server:
+      %a{href: "http://classic.battle.net/war3/ladder/w3xp-clan-profile.aspx?Gateway=Northrend&ClanTag=ITTP", target: "_blank"} europe.battle.net
+      %br/
+    #art-main
+      .art-sheet
+        .art-sheet-tl
+        .art-sheet-tr
+        .art-sheet-bl
+        .art-sheet-br
+        .art-sheet-tc
+        .art-sheet-bc
+        .art-sheet-cl
+        .art-sheet-cr
+        .art-sheet-cc
+        .art-sheet-body
+          .art-header
+            .art-header-clip
+              .art-header-center
+                .art-header-png
+                .art-header-jpeg
+            .art-logo
+              %h1.art-logo-name
+                %a{:href => "/"} Island Troll Tribes
+              %h2.art-logo-text TwGB
+          .cleared.reset-box
+          .art-nav
+            .art-nav-l
+            .art-nav-r
+            .art-nav-outer
+              %ul.art-hmenu
+                %li
+                  %a.l{:href => "./"}
+                    %span.l
+                    %span.r
+                    %span.t
+                      TwGB Home
+                %li
+                  %a{:href => "./?p=stats"}
+                    %span.l
+                    %span.r
+                    %span.t ITT Stats
+                %li
+                  %a.l{:href => "./?p=adminapp"}
+                    %span.l
+                    %span.r
+                    %span.t Admin Application
+                %li
+                  %a.l{:href => "./?p=rules"}
+                    %span.l
+                    %span.r
+                    %span.t TwGB Rules
+                %li
+                  %a.l{:href => "./?p=abuse"}
+                    %span.l
+                    %span.r
+                    %span.t Report Player Abuse
+                %li
+                  %a.l{:href => "./?p=contact"}
+                    %span.l
+                    %span.r
+                    %span.t Contact TwGB
+                %li
+                  %a.l{:href => "./forums/"}
+                    %span.l
+                    %span.r
+                    %span.t TwGB Forums
+          .cleared.reset-box
+          .art-content-layout
+            .art-content-layout-row
+              = render partial: 'layouts/left_sidebar' unless defined? @no_side_bar
+              .art-layout-cell.art-content
+                .art-post
+                  .art-post-body
+                    .art-post-inner.art-article
+                      .cleared
+                      .art-postcontent
+                        = yield
+                      .cleared
+                    .cleared
+                .cleared
+              = render partial: 'layouts/right_sidebar' unless defined? @no_side_bar
+          .cleared
+          .art-footer
+            .art-footer-t
+            .art-footer-l
+            .art-footer-b
+            .art-footer-r
+            .art-footer-body
+              .art-footer-text
+                %center
+                  %a{:href => "./shaman/", :target => "_blank"} Shaman Console
+              .cleared
+          .cleared
+      .cleared
