@@ -1,0 +1,28 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Games
+      %th Wins
+      %th Losses
+      %th Kills
+      %th Deaths
+      %th Gold
+      %th Max Kills
+      %th Max Deaths
+      %th Max Gold
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td
+          = link_to user.name, user
+        %td= user.games
+        %td= user.wins
+        %td= user.losses
+        %td= user.kills
+        %td= user.deaths
+        %td= user.gold
+        %td= user.max_kills
+        %td= user.max_deaths
+        %td= user.max_gold

@@ -1,0 +1,16 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Map
+      %th Date/Time
+      %th Duration
+
+  %tbody
+    - games.each do |game|
+      %tr
+        %td
+          = link_to game.gamename, game_path(game)
+        %td= game.map
+        %td= game.datetime
+        %td= "#{game.duration}m"

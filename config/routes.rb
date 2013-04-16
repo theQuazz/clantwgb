@@ -1,6 +1,23 @@
 Clantwgb::Application.routes.draw do
-  
+
+  match '/rules', to: 'pages#rules'
+  match '/report_abuse', to: 'pages#report_abuse'
+
+  resources :games, only: [:index, :show] do
+    member do
+      get 'download_replay'
+    end
+  end
+
+  resources :users
+
+  resources :ghost_mmd_users, only: [:index, :show] do
+  end
+
   root to: 'pages#home'
+
+  match '/botstatus.html' => "bot#get_game_info"
+  match '/bot-getgames.php' => "bot#update_game_info"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

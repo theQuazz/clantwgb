@@ -1,0 +1,8 @@
+= render partial: 'ghost_mmd_users/table', locals: { users: @game.users }
+
+- if Rails.env.development?
+  %section.debug
+    %pre{style:"width:100%;white-space: pre-wrap;"}
+      = @game.inspect
+      = @game.users.inspect
+      = @game.users_info.inspect
