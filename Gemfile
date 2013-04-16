@@ -14,6 +14,9 @@ gem 'haml-rails'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'redcarpet'
+  gem 'ember-rails'
+  gem 'emblem-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -22,7 +25,7 @@ group :assets do
 end
 
 group :development do
-  gem 'mysql'
+  gem 'mysql2'
 end
 
 # To use ActiveModel has_secure_password
