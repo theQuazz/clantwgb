@@ -11,6 +11,7 @@
     %meta{:content => "Website for Clan TwGB Warcraft III Island Troll Tribes custom games. Has stats, info, forums, and more.", :name => "description"}/
     %meta{:content => "island troll tribes clan twgb", :name => "keywords"}
     %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+    %link{href:'//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic', rel:'stylesheet', type:'text/css'}
   %body
     %section#servers.hidden{style:"display:none;"}
       Server:
@@ -50,38 +51,42 @@
             .art-nav-outer
               %ul.art-hmenu
                 %li
-                  %a.l{:href => "./"}
+                  = link_to root_path, class: 'l' do
                     %span.l
                     %span.r
-                    %span.t
-                      TwGB Home
+                    %span.t TwGB Home
                 %li
-                  %a{:href => "./?p=stats"}
+                  = link_to stats_path, class: 'l' do
                     %span.l
                     %span.r
-                    %span.t ITT Stats
+                    %span.t Stats
                 %li
-                  %a.l{:href => "./?p=adminapp"}
+                  = link_to games_path, class: 'l' do
+                    %span.l
+                    %span.r
+                    %span.t Games
+                %li
+                  = link_to admin_application_path, class: 'l' do
                     %span.l
                     %span.r
                     %span.t Admin Application
                 %li
-                  %a.l{:href => "./?p=rules"}
+                  = link_to rules_path, class: 'l' do
                     %span.l
                     %span.r
                     %span.t TwGB Rules
                 %li
-                  %a.l{:href => "./?p=abuse"}
+                  = link_to abuse_path, class: 'l' do
                     %span.l
                     %span.r
                     %span.t Report Player Abuse
                 %li
-                  %a.l{:href => "./?p=contact"}
+                  = link_to contact_path, class: 'l' do
                     %span.l
                     %span.r
                     %span.t Contact TwGB
                 %li
-                  %a.l{:href => "./forums/"}
+                  = link_to "http://www.clantwgb.com/forums", class: 'l' do
                     %span.l
                     %span.r
                     %span.t TwGB Forums
@@ -107,9 +112,8 @@
             .art-footer-b
             .art-footer-r
             .art-footer-body
-              .art-footer-text
-                %center
-                  %a{:href => "./shaman/", :target => "_blank"} Shaman Console
+              .art-footer-text{style:"text-align:center;"}
+                = link_to "Shaman Console", "http://shaman.clantwgb.com"
               .cleared
           .cleared
       .cleared

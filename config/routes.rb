@@ -2,6 +2,10 @@ Clantwgb::Application.routes.draw do
 
   match '/rules', to: 'pages#rules'
   match '/report_abuse', to: 'pages#report_abuse'
+  match '/stats', to: 'users#index'
+  match '/admin_application', to: 'pages#admin_application'
+  match '/abuse', to: 'pages#abuse'
+  match '/contact', to: 'pages#contact'
 
   resources :games, only: [:index, :show] do
     member do
