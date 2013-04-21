@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
   after_initialize :init_stats
 
+  attr_accessor :nickname
+
   ORDER_VARS = %w{
     games
     wins
