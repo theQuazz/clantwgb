@@ -16,9 +16,9 @@ Clantwgb::Application.routes.draw do
 
   root to: 'pages#home'
 
-  match '/botstatus.html' => "bot#get_game_info"
-  match '/bot-getgames.php' => "bot#update_game_info"
-  
+  match '/botstatus.html' => "bot_status#get_game_info"
+  match '/bot-getgames.php' => "bot_status#update_game_info"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

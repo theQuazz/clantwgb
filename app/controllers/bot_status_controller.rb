@@ -26,6 +26,6 @@ class BotStatusController < ApplicationController
   end
 
   def get_game_info
-    render json: @@game
+    render json: (@@game ||= {datetime: (Time.now - 1.year), gamename: "", slotsfull: ""})
   end
 end
