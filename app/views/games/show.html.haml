@@ -1,3 +1,5 @@
+= render partial: 'games/show', locals: { game: @game }
+
 = render partial: 'ghost_mmd_users/table', locals: { users: @game.users }
 
 - if Rails.env.development?

@@ -1,0 +1,15 @@
+%section
+  %h1= game.gamename
+
+  %label Map
+  .value= game.map
+
+  %label Date
+  .value= game.datetime
+
+  %label Length
+  .value= "#{game.duration}m"
+
+  - if game.replay_path
+    %label Download Replay
+    .value= link_to File.basename(game.replay_path), game_replay_download_path(game)
