@@ -1,5 +1,4 @@
 #art-main, table {
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -11,14 +10,10 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li {
 }
 
 .art-postcontent {
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   li, table {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   }
   a {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     &:link, &:visited, &.visited, &:hover, &.hovered {
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     }
   }
   p {
@@ -27,7 +22,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li {
 }
 
 h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link, h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  font-family: Arial, Helvetica, Sans-Serif;
   font-style: normal;
   font-weight: bold;
   font-size: 35px;
@@ -188,10 +182,6 @@ ul {
   list-style-type: none;
 }
 
-ol {
-  list-style-position: inside;
-}
-
 html {
   height: 100%;
 }
@@ -210,6 +200,7 @@ html {
 }
 
 body {
+  font-family: 'Noto Sans', sans-serif;
   padding: 0;
   margin: 0;
   color: #322C20;
@@ -437,19 +428,16 @@ h1.art-logo-name {
 h2.art-logo-text {
   display: block;
   text-align: center;
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-size: 13px;
   padding: 0;
   margin: 0;
   color: #0E2B43 !important;
   a {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-size: 13px;
     padding: 0;
     margin: 0;
     color: #0E2B43 !important;
     &:link, &:visited, &:hover {
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-size: 13px;
       padding: 0;
       margin: 0;
@@ -948,7 +936,6 @@ h2.art-logo-text {
     position: relative;
     height: 38px;
     color: #000000;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-size: 14px;
     margin: 0;
     padding: 0 11px 0 11px;
@@ -956,11 +943,9 @@ h2.art-logo-text {
     line-height: 38px;
     a {
       color: #000000;
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-size: 14px;
       &:link, &:visited, &:hover {
         color: #000000;
-        font-family: Tahoma, Arial, Helvetica, Sans-Serif;
         font-size: 14px;
       }
     }
@@ -1067,14 +1052,12 @@ ul.art-vmenu {
       clip: rect(auto, auto, auto, 891px);
     }
     .t {
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-style: normal;
       font-weight: normal;
       font-size: 13px;
     }
   }
   ul a {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
@@ -1226,7 +1209,6 @@ div.art-block img {
     position: relative;
     height: 38px;
     color: #000000;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-size: 14px;
     margin: 0;
     padding: 0 11px 0 11px;
@@ -1234,11 +1216,9 @@ div.art-block img {
     line-height: 38px;
     a {
       color: #000000;
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-size: 14px;
       &:link, &:visited, &:hover {
         color: #000000;
-        font-family: Tahoma, Arial, Helvetica, Sans-Serif;
         font-size: 14px;
       }
     }
@@ -1274,20 +1254,16 @@ div.art-block img {
   position: relative;
   padding: 3px;
   color: #48402E;
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-size: 14px;
   table, li {
     color: #48402E;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-size: 14px;
   }
   a {
     color: #48402E;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-size: 14px;
     &:link, &:visited, &:hover {
       color: #48402E;
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-size: 14px;
     }
   }
@@ -1323,7 +1299,6 @@ div.art-block img {
 .art-button-wrapper {
   a.art-button {
     text-decoration: none;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1346,7 +1321,6 @@ div.art-block img {
     cursor: pointer;
     &:link {
       text-decoration: none;
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
@@ -1371,7 +1345,6 @@ div.art-block img {
   }
   input.art-button, button.art-button {
     text-decoration: none;
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1424,7 +1397,6 @@ div.art-block img {
 
 input, select, textarea {
   vertical-align: middle;
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1587,13 +1559,10 @@ h2.art-postheader {
 /* begin PostIcons, PostHeaderIcons */
 
 .art-postheadericons {
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   color: #8C7D5A;
   a {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     color: #8C7D5A;
     &:link, &:visited, &:hover {
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       color: #8C7D5A;
     }
     text-decoration: none;
@@ -1696,13 +1665,10 @@ h2.art-postheader {
 /* begin PostIcons, PostFooterIcons */
 
 .art-postfootericons {
-  font-family: Tahoma, Arial, Helvetica, Sans-Serif;
   color: #8C7D5A;
   a {
-    font-family: Tahoma, Arial, Helvetica, Sans-Serif;
     color: #8C7D5A;
     &:link, &:visited, &:hover {
-      font-family: Tahoma, Arial, Helvetica, Sans-Serif;
       color: #8C7D5A;
     }
     text-decoration: none;
@@ -1842,7 +1808,6 @@ div.art-footer img {
 /* begin PageFooter */
 
 .art-page-footer {
-  font-family: Arial;
   font-size: 10px;
   letter-spacing: normal;
   word-spacing: normal;
@@ -1851,7 +1816,6 @@ div.art-footer img {
   text-decoration: underline;
   color: #3D5257;
   a {
-    font-family: Arial;
     font-size: 10px;
     letter-spacing: normal;
     word-spacing: normal;
@@ -1860,7 +1824,6 @@ div.art-footer img {
     text-decoration: underline;
     color: #3D5257;
     &:link, &:visited, &:hover {
-      font-family: Arial;
       font-size: 10px;
       letter-spacing: normal;
       word-spacing: normal;
