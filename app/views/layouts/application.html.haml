@@ -93,7 +93,6 @@
           .cleared.reset-box
           .art-content-layout
             .art-content-layout-row
-              = render partial: 'layouts/left_sidebar' unless defined? @no_side_bar
               .art-layout-cell.art-content
                 .art-post
                   .art-post-body
@@ -104,7 +103,7 @@
                       .cleared
                     .cleared
                 .cleared
-              = render partial: 'layouts/right_sidebar' unless defined? @no_side_bar
+              = render partial: 'layouts/left_sidebar' unless defined? @no_side_bar
           .cleared
           .art-footer
             .art-footer-t
