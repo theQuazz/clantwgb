@@ -2,7 +2,7 @@ class GhostGame < ActiveRecord::Base
   establish_connection(:ghost)
   self.table_name = 'games'
 
-  REPLAYS_PATH = File.join(%w{cygdrive c Users Jesse gpp replays})
+  REPLAYS_PATH = File.join(%w{/ cygdrive c Users Jesse gpp replays})
 
   has_many :users_info, class_name: 'GhostUser', foreign_key: 'gameid', order: 'id ASC'
   has_many :users, class_name: 'GhostMmdUser', foreign_key: 'gameid', order: 'pid ASC'
@@ -17,7 +17,7 @@ class GhostGame < ActiveRecord::Base
   end
 
   def replay_path
-    possibilities = Dir.glob(File.join([REPLAYS_PATH,'*'])).grep(/#{datetime.strftime("%Y-%m-%d %H:%M:%S").scan(/(^\d{4}-\d{2}-\d{2})/).flatten.first}/).grep(/#{gamename}/)
+    possibilities = Dir.glob(File.join([REPLAYS_PATH,'*'])).grep(/#{datetime.strftime("%Y-%m-%d")}/).grep(/#{Regexp.escape(gamename)}/)
     if possibilities.count == 1
       possibilities.first
     else
