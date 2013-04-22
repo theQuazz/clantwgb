@@ -10,5 +10,6 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find params[:id]
+    @no_side_bar = true
   end
 end

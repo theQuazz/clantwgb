@@ -1,0 +1,35 @@
+%section
+  %h1= @user.name
+
+  %label Games
+  .value= @user.games
+
+  %label Wins
+  .value= @user.wins
+
+  %label Losses
+  .value= @user.losses
+
+  %label Win Percent
+  .value= number_with_precision(@user.win_percent, precision: 2) + "%"
+
+  %label Kills
+  .value= @user.kills
+
+  %label Deaths
+  .value= @user.deaths
+
+  %label Gold
+  .value= @user.gold
+
+  %label Max Kills
+  .value= @user.max_kills
+
+  %label Max Deaths
+  .value= @user.max_deaths
+
+  %label Max Gold
+  .value= @user.max_gold
+
+  %h3 Games #{@user.name} has played in
+  = render partial: 'games/table', locals: { games: @user.games_played }

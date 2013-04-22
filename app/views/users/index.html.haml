@@ -16,7 +16,7 @@
     - @users.each do |user|
       %tr
         %td
-          = link_to user.name, user
+          = link_to user.name, "/users/#{user.name}"
         %td= user.games
         %td= user.wins
         %td= user.losses

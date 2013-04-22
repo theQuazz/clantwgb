@@ -14,10 +14,9 @@
       %tr
         %td= user.pid+1
         %td
-          = link_to user.name, ghost_mmd_user_path(user)
+          = link_to user.name, "/users/#{user.name}"
         %td= user.troll_class
         %td= user.flag
         %td= user.kills
         %td= user.deaths
         %td= user.gold
-  

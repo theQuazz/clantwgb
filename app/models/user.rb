@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   after_initialize :init_stats
 
-  attr_accessor :nickname
+  attr_reader :name
 
   ORDER_VARS = %w{
     games
@@ -60,9 +60,17 @@ class User < ActiveRecord::Base
     LIMIT 1
   }
 
-  def name=(new_name)
-    super
+  def name=(val)
+    @name = val
     init_stats
+    @name
+  end
+
+  def self.find(id)
+    u = User.new
+    u.name = id
+    u.init_stats
+    u
   end
 
   def self.top(opt={})
@@ -85,8 +93,8 @@ class User < ActiveRecord::Base
   end
 
   def init_stats
-    if nickname
-      sql = ActiveRecord::Base.send(:sanitize_sql_array, [SINGLE_PLAYER, nickname])
+    if name
+      sql = ActiveRecord::Base.send(:sanitize_sql_array, [SINGLE_PLAYER, name])
       Ghost.connection.select_one(sql).each do |key,var|
         instance_variable_set "@#{key}", (var||0) # 0 is for if the left join returns nil on a column
         class_eval do
@@ -94,5 +102,13 @@ class User < ActiveRecord::Base
         end
       end
     end
+  end
+
+  def games_played
+    GhostGame.joins(:users).where('name = ?', name).order('id DESC')
+  end
+
+  def win_percent
+    wins / Float(games) * 100
   end
 end
