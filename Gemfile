@@ -27,6 +27,7 @@ end
 gem 'mysql2'
 gem 'eventmachine'
 gem 'thin'
+gem 'minitest' # required for active_support...?
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
