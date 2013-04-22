@@ -12,4 +12,4 @@
 
   - if game.replay_path
     %label Download Replay
-    .value= link_to File.basename(game.replay_path), game_replay_download_path(game)
+    .value= link_to File.basename(game.replay_path), download_replay_game_path(game)
