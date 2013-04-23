@@ -108,6 +108,22 @@ class User < ActiveRecord::Base
     GhostGame.joins(:users).where('name = ?', name).order('id DESC')
   end
 
+  def classes_played
+    if name
+      sql = ActiveRecord::Base.send(:sanitize_sql_array, [%q{select trim(both '\"' from value_string) class_name, count(*) count from w3mmdvars v inner join w3mmdplayers p on p.pid = v.pid and p.gameid = v.gameid where v.varname = 'class' and p.name = ? group by v.value_string order by count desc}, name])
+      Ghost.connection.select_all(sql).map do |klass|
+        {
+          class_name: klass["class_name"].gsub(/unit_/i, '').gsub(/_/, ' ').titleize,
+          count: klass["count"]
+        }
+      end
+    end
+  end
+
+  def most_played_class
+    classes_played.first.try(:[], :class_name)
+  end
+
   def win_percent
     wins / Float(games) * 100
   end
