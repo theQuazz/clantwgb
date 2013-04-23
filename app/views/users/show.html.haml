@@ -1,8 +1,9 @@
 %section
   %h1= @user.name
 
-  %label Most Played Class
-  .value= @user.most_played_class
+  - if @user.most_played_class
+    %label Most Played Class
+    .value= @user.most_played_class
 
   %label Games
   .value= @user.games
